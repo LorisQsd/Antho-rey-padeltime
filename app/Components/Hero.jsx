@@ -50,14 +50,17 @@ export default function Hero() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold leading-6 text-white"
+                className="text-sm font-semibold leading-6 text-white hover:text-blue-500"
               >
                 {item.name}
               </a>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-white">
+            <a
+              href="#"
+              className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-500"
+            >
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
@@ -147,7 +150,7 @@ export default function Hero() {
               Padel Time
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-900">
-              Bienvenue sur ton application de Padel
+              Application de gestion de groupe de Padel
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Button />
