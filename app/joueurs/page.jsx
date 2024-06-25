@@ -1,10 +1,9 @@
-export default function Players() {
+export default function Joueurs() {
   const people = [
     {
       name: "Anthony REY",
       surname: "TiZeN",
-      imageUrl:
-        "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+      imageUrl: "/antho.jpeg",
       xUrl: "#",
       linkedinUrl: "#",
     },
@@ -36,7 +35,7 @@ export default function Players() {
   ];
 
   return (
-    <div className="bg-gray-900 py-24 sm:py-32">
+    <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
