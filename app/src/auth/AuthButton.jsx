@@ -1,11 +1,13 @@
 import { useRef, useState } from "react";
 import { FiLock } from "react-icons/fi";
 import { motion } from "framer-motion";
+import { useSession, signIn, signOut } from "next-auth/react";
 
-const Button = () => {
+const AuthButton = () => {
+  /* const { data: session } = useSession(); */
   return (
     <div className="">
-      <EncryptButton />
+      <EncryptButton />{" "}
     </div>
   );
 };
@@ -63,8 +65,12 @@ const EncryptButton = () => {
       }}
       onMouseEnter={scramble}
       onMouseLeave={stopScramble}
+      onClick={async () => {
+        await signIn();
+      }}
       className="group relative overflow-hidden rounded-lg border-[1px] border-neutral-500 bg-neutral-700 px-4 py-2 font-mono font-medium uppercase text-neutral-300 transition-colors hover:text-indigo-300"
     >
+      {" "}
       <div className="relative z-10 flex items-center gap-2">
         <FiLock />
         <span>{text}</span>
@@ -88,4 +94,4 @@ const EncryptButton = () => {
   );
 };
 
-export default Button;
+export default AuthButton;

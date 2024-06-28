@@ -5,7 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Button from "../ui/Button";
+import Button from "../src/auth/AuthButton";
 
 const navigation = [
   { name: "Joueurs", href: "/joueurs" },
@@ -55,7 +55,10 @@ const Header = () => {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <a
+            href="#"
+            className="text-sm font-semibold leading-6 text-white hover:text-blue-400"
+          >
             Log in <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
@@ -101,7 +104,7 @@ const Header = () => {
               <div className="py-6">
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-blue-800"
                 >
                   Log in
                 </a>
